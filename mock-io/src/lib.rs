@@ -1,5 +1,24 @@
 #![no_std]
 
-use tfl as _; // memory layout + panic handler
+use defmt::info;
 
-pub mod mock_io {}
+pub struct MockIo{
+    pub value: i32,
+}
+
+impl MockIo{
+
+    pub fn default() -> MockIo {
+        MockIo{value: 0}
+    }
+
+    pub fn read(self) -> i32{
+        info!("Reading IO...");
+        return self.value;
+    }
+
+    pub fn write(mut self, value: i32) {
+        info!("Writing {} to IO...", value);
+        self.value = value;
+    }
+}
