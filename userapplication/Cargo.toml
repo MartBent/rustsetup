@@ -1,8 +1,9 @@
 [package]
-authors = ["Mart Bent <m.bent@teneo-iot.nl>"]
-name = "tfl"
-edition = "2018"
+name = "userapplication"
 version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 cortex-m = "0.7.1"
@@ -12,8 +13,8 @@ defmt-rtt = "0.2.0"
 panic-probe = { version = "0.2.0", features = ["print-defmt"] }
 
 #subcrates
-mock-io = { path = "../mock-io" }
-
+mock-io = { path = "../mock-io"  }
+tfl = { path = "../tfl"}
 
 [dependencies.stm32wl-hal]
 git = "https://github.com/newAM/stm32wl-hal.git"
@@ -35,3 +36,4 @@ defmt-debug = []
 defmt-info = []
 defmt-warn = []
 defmt-error = []
+

@@ -2,7 +2,7 @@
 
 use core::sync::atomic::{AtomicUsize, Ordering};
 
-use defmt_rtt as _; // global logger
+use defmt_rtt as _; 
 use stm32wl_hal as _;
 use panic_probe as _;
 
