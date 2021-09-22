@@ -4,9 +4,4 @@
 
 use tfl as _;
 
-#[cortex_m_rt::entry]
-fn main() -> ! {
-    defmt::info!("Hello, world!");
-
-    loop {}
-}
+pub mod {{crate_name}};
