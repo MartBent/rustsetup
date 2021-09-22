@@ -12,12 +12,12 @@ impl MockIo{
         MockIo{value: 0}
     }
 
-    pub fn read(self) -> i32{
+    pub fn read(&self) -> i32{
         info!("Reading IO...");
-        return self.value;
+        return self.value + 1;
     }
 
-    pub fn write(mut self, value: i32) {
+    pub fn write(&mut self, value: i32) {
         info!("Writing {} to IO...", value);
         self.value = value;
     }
