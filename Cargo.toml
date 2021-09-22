@@ -1,8 +1,6 @@
 [workspace]
 members = [
-  "mock-io",
-  "tfl",
-  "userapplication"
+  "debug-setup",
 ]
 
 # cargo build/run
